@@ -79,6 +79,10 @@ $primary_color: #2eb960;
     cursor: pointer;
 }
 
+.cf_error{ 
+    color: #f44336;
+}
+
 @media (max-width: 576px) {
     .cf_h1 {
         font-size: 21px;
