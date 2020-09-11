@@ -22,10 +22,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
             </div>
         `)
 
-        $("#cf_code").click(function(){
+        $("#cf_code").click(function () {
             $("#cf_tooltip").attr("data-original-title", "Copiato!")
             $('#cf_tooltip').tooltip('show')
-            setTimeout(function(){
+            setTimeout(function () {
                 $("#cf_tooltip").attr("data-original-title", "")
                 $('#cf_tooltip').tooltip('hide')
             }, 800)
@@ -40,6 +40,24 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
 
     let user = {}
+
+    let inputcheck
+    $("#cf_place").change(function () {
+        $(".cf_error").remove()
+        cities.forEach(element => {
+            if (element.toLowerCase() == $('#cf_place').val().toLowerCase()) {
+                inputcheck = true
+            }
+        });
+        if (inputcheck) {
+            $(".cf_error").remove()
+            inputcheck = false
+        } else {
+            $(".cf_card-body").append(`
+                <p class="cf_label cf_error">Inserisci una provincia e una sigla valida</p>
+            `)
+        }
+    })
 
     $("#cf_form").submit(function (e) {
         e.preventDefault()
@@ -59,7 +77,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
             "birthplace": $("#cf_place").val(),
             "birthplaceProvincia": $("#cf_place-tag").val().toUpperCase()
         }
-        console.log(user)
         let cf = new CodiceFiscale(user);
         Cookies.set('cf', cf)
 
