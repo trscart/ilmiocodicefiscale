@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Il Mio Codice Fiscale</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./src/index.css">
+</head>
+
+<body>
+    <div class="container cf_container">
+        <div class="row h-100 align-items-center">
+            <div class="col d-flex justify-content-center">
+                <div class="card shadow cf_card">
+                    <div class="card-header d-flex align-items-center p-4 cf_card-header">
+                        <img src="./src/img/logo_repubblica.svg" class="cf_logo-repubblica"
+                            alt="logo repubblica italiana">
+                        <h1 class="cf_h1 text-white ml-4 mb-0">Calcola qui il tuo <b>Codice Fiscale</b></h1>
+                    </div>
+                    <div class="card-body p-4 cf_card-body">
+                        <form id="cf_form">
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="cf_name" class="cf_h3 mb-0">Nome</label>
+                                        <input type="text" class="form-control cf_input cf_p" id="cf_name" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="cf_surname" class="cf_h3 mb-0">Cognome</label>
+                                        <input type="text" class="form-control cf_input cf_p" id="cf_surname" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label for="cf_date" class="cf_h3 mb-0">Data di nascita</label>
+                                        <input type="date" class="form-control cf_input cf_p" id="cf_date" required>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <label for="cf_gender" class="cf_h3 mb-0">Sesso</label>
+                                    <select class="form-control cf_input cf_p" id="cf_gender" required>
+                                        <option>M</option>
+                                        <option>F</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- <div class="form-row align-items-end">
+                                <div class="col-12">
+                                    <label for="cf_date" class="cf_h3 mb-0">Data di nascita</label>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <select class="form-control cf_input cf_p" id="cf_date-day" required>
+                                            <option selected disabled>Giorno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <select class="form-control cf_input cf_p" id="cf_date-month" required>
+                                            <option selected disabled>Mese</option>
+                                            <option>Gennaio</option>
+                                            <option>Febbraio</option>
+                                            <option>Marzo</option>
+                                            <option>Aprile</option>
+                                            <option>Maggio</option>
+                                            <option>Giugno</option>
+                                            <option>Luglio</option>
+                                            <option>Agosto</option>
+                                            <option>Settembre</option>
+                                            <option>Ottobre</option>
+                                            <option>Novembre</option>
+                                            <option>Dicembre</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="form-group">
+                                        <select class="form-control cf_input cf_p" id="cf_date-year" required>
+                                            <option selected disabled>Anno</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="form-row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="cf_place" class="cf_h3 mb-0">Città di nascita</label>
+                                        <input type="text" class="form-control cf_input cf_p" id="cf_place" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="cf_place-tag" class="cf_h3 mb-0">Sigla provincia</label>
+                                        <input type="text" class="form-control cf_input cf_p" id="cf_place-tag">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
+                                id="cf_btn-send">Calcola</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"
+        integrity="sha512-Meww2sXqNHxI1+5Dyh/9KAtvI9RZSA4c1K2k5iL02oiPO/RH3Q30L3M1albtqMg50u4gRTYdV4EXOQqXEI336A=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <script src="./src/cf.js"></script>
+    <script src="./src/index.js"></script>
+</body>
+
+</html>

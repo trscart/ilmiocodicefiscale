@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+$primary_color: #2eb960;
+
+.cf_h1 {
+    font-size: 32px;
+    //font-weight: 600;
+}
+
+.cf_h2 {
+    font-size: 24px;
+}
+
+.cf_h3 {
+    font-size: 21px;
+    font-weight: 600;
+}
+
+.cf_p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.cf_label {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cf_container {
+    height: 100vh;
+}
+
+.cf_card {
+    border-radius: 40px;
+    width: 800px;
+    border: 0;
+
+    .cf_card-header {
+        background-color: $primary_color;
+        border-radius: 40px 40px 0 0;
+    }
+}
+
+.cf_logo-repubblica {
+    width: 65px;
+}
+
+.cf_input {
+    &:focus {
+        border-color: $primary_color;
+        outline: 0;
+        box-shadow: 0 0 0 0.2rem rgba(46, 185, 96, 0.25);
+    }
+}
+
+.cf_btn {
+    background-color: $primary_color;
+    border: 0;
+
+    &:hover {
+        background-color: lighten($primary_color, 10%);
+    }
+
+    &:focus {
+        background-color: $primary_color;
+        box-shadow: 0 0 0 0.2rem rgba(46, 185, 96, 0.25);
+    }
+
+    &:active {
+        background-color: $primary_color !important;
+    }
+}
+
+#cf_code {
+    cursor: pointer;
+}
+
+@media (max-width: 576px) {
+    .cf_h1 {
+        font-size: 21px;
+    }
+
+    .cf_h2 {
+        font-size: 21px;
+    }
+
+    .cf_h3 {
+        font-size: 18px;
+    }
+
+    .cf_p {
+        font-size: 14px;
+    }
+
+    .cf_label {
+        font-size: 14px;
+    }
+
+    .cf_logo-repubblica {
+        width: 45px;
+    }
+}
