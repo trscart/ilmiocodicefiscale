@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         $("#cf_form").hide()
         $(".cf_card-body").append(`
             <div class="text-center" id="cf_result">
-                <h2 class="cf_h2" id="cf_code" data-toggle="tooltip" title="Some tooltip text!" data-clipboard-text=` + cf_obj.cf + `>Il tuo codice fiscale è <b style="color: #2eb960">` + cf_obj.cf + `</b></h2>
+                <h2 class="cf_h2" id="cf_code" data-toggle="tooltip" title="Some tooltip text!" data-clipboard-text=` + cf.code + `>Il tuo codice fiscale è <b style="color: #2eb960">` + cf.code + `</b></h2>
                 <button type="click" class="btn btn-primary cf_btn mt-2" id="cf_btn-back">Indietro</button>
                 <button type="click" class="btn btn-primary cf_btn mt-2" id="cf_btn-restart">Ricalcola</button>
             </div>
