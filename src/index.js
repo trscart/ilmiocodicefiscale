@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         let month = parseInt(date_split[1])
         let day = parseInt(date_split[2])
 
-        if ($("#cf_place-tag").val() == "") {
+        /* if ($("#cf_place-tag").val() == "") {
             user = {
                 "name": $("#cf_name").val(),
                 "surname": $("#cf_surname").val(),
@@ -87,6 +87,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 "birthplace": $("#cf_place").val(),
                 "birthplaceProvincia": $("#cf_place-tag").val().toUpperCase()
             }
+        } */
+
+        user = {
+            "name": $("#cf_name").val(),
+            "surname": $("#cf_surname").val(),
+            "gender": $("#cf_gender").val(),
+            "day": day,
+            "month": month,
+            "year": year,
+            "birthplace": $("#cf_place").val()
         }
 
         let cf = new CodiceFiscale(user);
