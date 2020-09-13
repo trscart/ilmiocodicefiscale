@@ -24,14 +24,14 @@
 <body>
     <div class="container cf_container">
         <div class="row h-100 align-items-center">
-            <div class="col d-flex justify-content-center">
-                <div class="card shadow cf_card">
+            <div class="col d-flex flex-column align-items-center">
+                <div class="card shadow cf_card mt-5" id="cf_normal-card">
                     <div class="card-header d-flex align-items-center p-4 cf_card-header">
                         <img src="./src/img/logo_repubblica.svg" class="cf_logo-repubblica"
                             alt="logo repubblica italiana">
                         <h1 class="cf_h1 text-white ml-4 mb-0">Calcola qui il tuo <b>Codice Fiscale</b></h1>
                     </div>
-                    <div class="card-body p-4 cf_card-body">
+                    <div class="card-body p-4 cf_card-body" id="cf_normal-card-body">
                         <form id="cf_form">
                             <div class="form-row">
                                 <div class="col-md-6">
@@ -119,7 +119,239 @@
                         </form>
                     </div>
                 </div>
+
+                <div class="card shadow cf_card mt-5" id="cf_reverse-card">
+                    <div class="card-header d-flex align-items-center p-4 cf_card-header">
+                        <img src="./src/img/logo_repubblica.svg" class="cf_logo-repubblica"
+                            alt="logo repubblica italiana">
+                        <h1 class="cf_h1 text-white ml-4 mb-0">Calcola qui il tuo <b>Codice Fiscale Inverso</b></h1>
+                    </div>
+                    <div class="card-body p-4 cf_card-body" id="cf_reverse-card-body">
+                        <form id="cf_reverse-form">
+                            <div class="form-group">
+                                <label for="cf_reverse" class="cf_h3 mb-0">Il tuo Codice Fiscale</label>
+                                <input type="text" class="form-control cf_input cf_p" id="cf_reverse" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
+                                id="cf_btn-send">Calcola</button>
+                        </form>
+                    </div>
+                </div>
+
+                <button class="btn cf_btn-collapse cf_h3 mt-2" id="cf_normal-btn" type="button">
+                    Calcola il tuo <b>Codice Fiscale</b>
+                </button>
+                <button class="btn cf_btn-collapse cf_h3 mt-2" id="cf_reverse-btn" type="button">
+                    Calcola il tuo <b>Codice Fiscale inverso</b>
+                </button>
             </div>
+            <footer class="container cf_footer align-self-end mt-5 mt-md-0">
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center">
+                        <!-- description modal -->
+                        <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
+                            data-target="#cf_description-modal">
+                            Cos'è il <b>Codice Fiscale</b> e come si calcola?
+                        </button>
+                        <div class="modal fade" id="cf_description-modal" data-keyboard="false" tabindex="-1"
+                            aria-labelledby="cf_description-modal-label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title cf_color" id="cf_description-modal-label">Cos'è il
+                                            <b>Codice
+                                                Fiscale</b> e come si calcola?</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="cf_p">
+                                            Il <b>codice fiscale</b> è un codice utilizzato ai fini fiscali ed
+                                            amministrativi per
+                                            identificare in modo univoco i cittadini italiani.
+                                            E' un <b>codice alfanumerico di 16 caratteri</b>, generato da un semplice
+                                            <b>algoritmo
+                                                ed
+                                                introdotto nel 1973</b> da un decreto del Presidente della Repubblica
+                                            (Decreto 605
+                                            del
+                                            29/09/1973)<br><br>
+                                            Per effettuare il calcolo del codice fiscale si seguono le regole del dm del
+                                            12/03/1974,
+                                            in base al quale per generare il codice si deve procedere così:
+                                        </p>
+                                        <ul class="cf_p">
+                                            <li>Le prime tre lettere del Codice fiscale sono prese dalle consonanti del
+                                                cognome o
+                                                dei cognomi se sono più di uno, in caso di consonanti insufficienti
+                                                vengono
+                                                prese
+                                                anche le vocali, che però vengono sempre dopo le consonanti
+                                            </li>
+                                            <li>
+                                                Le seconde tre lettere sono prese dalle consonanti del nome o dei nomi
+                                                se
+                                                sono più
+                                                di uno, se il nome non ha abbastanza consonanti vengono prese anche le
+                                                vocali, nel
+                                                caso di due nomi separati da virgola verrà considerato solo il primo
+                                                nome
+                                            </li>
+                                            <li>
+                                                I due numeri coincidono con l’anno di nascita
+                                            </li>
+                                            <li>
+                                                Una lettera indica il mese di nascita (a=gennaio, b=febbraio, c=marzo,
+                                                ecc.)
+                                            </li>
+                                            <li>
+                                                Altri due numeri indicano il giorno di nascita, per le donne bisogna
+                                                aggiungere 40,
+                                                quindi se il giorno di nascita è l’8, le due cifre saranno 48
+                                            </li>
+                                            <li>
+                                                Una lettera e tre numeri indicano il Comune di nascita, per chi è nato
+                                                all’estero la
+                                                sigla inizia per Z ed è seguita dal numero che identifica lo Stato di
+                                                nascita
+                                            </li>
+                                            <li>
+                                                Un carattere alfabetico di controllo generato attraverso uno speciale
+                                                algoritmo e
+                                                che chiude ogni cf valido
+                                            </li>
+                                        </ul>
+                                        <p class="cf_p">
+
+                                            È possibile che due persone abbiano lo stesso codice fiscale ma, in questo
+                                            caso,
+                                            l'Agenzia delle Entrate provvede a sostituire alcuni caratteri per risolvere
+                                            l'ambiguità.<br><br>
+                                            Il presente calcolo online del codice fiscale segue le regole del DM del
+                                            12/03/1974, <b>trascurando i rarissimi casi di omocodie e relative
+                                                correzioni
+                                                note solo
+                                                all'Agenzia delle Entrate</b>
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary cf_btn"
+                                            data-dismiss="modal">Chiudi</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- cookie modal -->
+                        <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
+                            data-target="#cf_cookie-modal">
+                            Cookie Policy
+                        </button>
+                        <div class="modal fade" id="cf_cookie-modal" data-keyboard="false" tabindex="-1"
+                            aria-labelledby="cf_cookie-modal-label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-scrollable">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title cf_color" id="cf_cookie-modal-label">Cookie Policy</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="cf_p">
+                                            I cookie sono piccole stringhe di testo scambiate tra un sito web e il
+                                            browser di navigazione dell'utente, ogni volta che si accede ad un sito
+                                            Internet. Sono utilizzati per eseguire autenticazioni automatiche,
+                                            tenere
+                                            traccia delle sessioni, memorizzare informazioni per migliorare la
+                                            navigabilità del sito o l'esperienza di navigazione dell'utente. Ogni
+                                            dominio visitato attraverso un browser puù impostare uno o più cookies.
+                                            Una
+                                            pagina Internet può contenere oggetti che provengono da molti domini
+                                            diversi
+                                            e ognuno di essi può impostare dei cookie (in questo caso denominati “di
+                                            terze parti”). L'utilizzo dei cookie consente di migliorare l'esperienza
+                                            di
+                                            navigazione nel sito Web e può mantenere le impostazioni scelte durante
+                                            la
+                                            Sua visita successiva.
+                                            <br><br>
+                                            Esistono due tipi di cookie:<br>
+                                        </p>
+                                        <ul class="cf_p">
+                                            <li>
+                                                cookie di prima parte (o proprietari): soggetti e leggibili dal solo
+                                                dominio che li ha creati;
+                                            </li>
+                                            <li>
+                                                cookie di terze parti: soggetti e creati da domini esterni a quello
+                                                che stiamo visitando.
+                                            </li>
+                                        </ul>
+                                        <p class="cf_p">
+                                            Codicefiscale.com, per il proprio sito Web, utilizza i seguenti cookie:
+                                            <br><br>
+                                            <b>Analytics</b><br>
+                                            Google Analytics è uno strumento gratuito di analisi web di Google che
+                                            principalmente consente di raccogliere informazioni (come ad esempio, dati
+                                            relativi alle pagine visitate, al tempo trascorso sul sito, al modo in cui
+                                            il sito è stato raggiunto e a tutto quello che l'utente ha cliccato mentre
+                                            navigava fra le nostre pagine) in forma anonima e segnalare le tendenze dei
+                                            siti web senza identificare i singoli visitatori.
+                                            <br><br>
+                                            Può visionare le direttive sulla privacy di Google al seguente link:<br>
+                                            <a href="http://www.google.it/intl/it/policies/privacy/"
+                                                target="_blank">http://www.google.it/intl/it/policies/privacy/</a>
+                                            <br><br>
+                                            L'utente può modificare l'impostazione di ricezione del cookie modificando
+                                            le impostazioni di memorizzazione dello stesso come descritto nella sezione
+                                            "Come si disabilitano i cookie?" di questa informativa.
+                                            <br><br>
+
+                                            <b>Remarketing</b><br>
+                                            Codicefiscale.com utilizza cookie di terze parti per gestire lo strumento di
+                                            remarketing delle offerte contenute nel sito. Tale strumento consente di
+                                            pubblicare nella rete di contenuti di Google annunci personalizzati in base
+                                            alle visite degli utenti al nostro sito.
+                                            <br><br>
+                                            Le pagine del nostro sito includono un codice che permette di leggere e
+                                            configurare i cookie del browser al fine di determinare quale tipo di
+                                            annuncio l'utente visualizzerà in base ai dati relativi alla sua visita al
+                                            sito.
+                                            <br><br>
+                                            L'utente può modificare l'impostazione di ricezione del cookie modificando
+                                            le impostazioni di Privacy come descritto nella sezione "Come si
+                                            disabilitano i cookie?" di questa informativa.
+                                            <br><br>
+
+                                            <b>Come si disabilitano i cookie?</b><br>
+                                            La maggior parte dei browser (Internet Explorer, Firefox, etc.) sono
+                                            configurati per accettare i cookie. Tuttavia, tutti i browser permettono di
+                                            controllare e disabilitare i cookie attraverso le impostazioni del browser.
+                                            <br><br>
+                                            Per gestire i cookie di terze parti che utilizzano le informazioni
+                                            dell'utente per generare specifiche azioni (come l'attività di remarketing),
+                                            è possibile gestire l'utilizzo da parte di Google visitando la pagina
+                                            Preferenze annunci (se si dispone di un account Google). In alternativa, è
+                                            possibile disattivare l'uso dei cookie da parte di un fornitore di terze
+                                            parti, ad esempio, visitando la pagina di disattivazione tramite il sito
+                                            www.youronlinechoices.eu, o in alternativa, come descritto precedentemente,
+                                            disabilitando i cookie tramite le impostazioni del proprio browser.
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary cf_btn"
+                                            data-dismiss="modal">Chiudi</button>
+                                        <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="cf_label text-center">© ilmiocodicefiscale - Copyright 2020</p>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
 

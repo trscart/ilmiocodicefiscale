@@ -6,6 +6,10 @@
 
 $primary_color: #2eb960;
 
+a {
+    word-break: break-all;
+}
+
 .cf_h1 {
     font-size: 32px;
     //font-weight: 600;
@@ -30,13 +34,17 @@ $primary_color: #2eb960;
     font-weight: 600;
 }
 
+.cf_color {
+    color: $primary_color;
+}
+
 .cf_container {
     height: 100vh;
 }
 
 .cf_card {
     border-radius: 40px;
-    width: 800px;
+    max-width: 800px;
     border: 0;
 
     .cf_card-header {
@@ -79,8 +87,25 @@ $primary_color: #2eb960;
     cursor: pointer;
 }
 
-.cf_error{ 
+.cf_error {
     color: #f44336;
+}
+
+.cf_btn-collapse {
+    color: $primary_color;
+
+    &:hover {
+        color: lighten($primary_color, 10%);
+    }
+
+    &:focus {
+        color: $primary_color;
+        box-shadow: none;
+    }
+
+    &:active {
+        color: $primary_color !important;
+    }
 }
 
 @media (max-width: 576px) {
