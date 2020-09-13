@@ -148,20 +148,26 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
         $("#cf_reverse-form").hide()
         $("#cf_reverse-card-body").append(`
-            <div id="cf_reverse-result">
-                <h3 class="cf_h3">Codice Fiscale</h3>
-                <p class="cf_p">` + data.cf + `</p>
-                <h3 class="cf_h3">Sesso</h3>
-                <p class="cf_p">` + data.gender + `</p>
-                <h3 class="cf_h3">Nome</h3>
-                <p class="cf_p">` + data.name + `</p>
-                <h3 class="cf_h3">Cognome</h3>
-                <p class="cf_p">` + data.surname + `</p>
-                <h3 class="cf_h3">Data di nascita</h3>
-                <p class="cf_p">` + data.day + `/`+ data.month + `/` + data.year + `</p>
-                <h3 class="cf_h3">Città di nascita</h3>
-                <p class="cf_p">` + data.birthplace + ` (` + data.birthplaceProvincia + `)</p>
-                <button type="click" class="btn btn-primary float-right cf_btn mt-2" id="cf_reverse-btn-restart">Ricalcola</button>
+            <div class="container p-0" id="cf_reverse-result">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3 class="cf_h3">Codice Fiscale</h3>
+                        <p class="cf_p">` + data.cf + `</p>
+                        <h3 class="cf_h3">Nome</h3>
+                        <p class="cf_p">` + data.name + `</p>
+                        <h3 class="cf_h3">Cognome</h3>
+                        <p class="cf_p">` + data.surname + `</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="cf_h3">Sesso</h3>
+                        <p class="cf_p">` + data.gender + `</p>
+                        <h3 class="cf_h3">Data di nascita</h3>
+                        <p class="cf_p">` + data.day + `/`+ data.month + `/` + data.year + `</p>
+                        <h3 class="cf_h3">Città di nascita</h3>
+                        <p class="cf_p">` + data.birthplace + ` (` + data.birthplaceProvincia + `)</p>
+                        <button type="click" class="btn btn-primary float-right cf_btn mt-2" id="cf_reverse-btn-restart">Ricalcola</button>
+                    </div>
+                </div>
             </div>
         `)
 
