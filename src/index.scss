@@ -57,10 +57,18 @@ a {
     width: 65px;
 }
 
+.form-group{
+    &:active{
+        label{
+            color: $primary_color;
+        }
+    }
+}
+
 .cf_input {
     border-radius: 0;
     border: 0;
-    border-bottom: 1px solid #dedede;
+    border-bottom: 1px solid #d9d9d9;
     transition: 0.5s;
     
     &:focus {
