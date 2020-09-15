@@ -34,9 +34,18 @@ document.addEventListener("DOMContentLoaded", function (event) {
         })
     }
 
+
     // for IE11
     if (navigator.userAgent.indexOf('Trident/') > 0) {
         $("#cf_date-label").text("Data di nascita (yyyy-gg-mm)")
+    }
+    // for safari
+    if (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && $(window).width() > 768) {
+        if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
+            console.log("chrome")
+        } else {
+            $("#cf_date-label").text("Data di nascita (yyyy-gg-mm)")
+        }
     }
 
     // autocomplete city
