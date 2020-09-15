@@ -1,0 +1,5 @@
+# allows all agents
+
+User-agent: *
+
+Sitemap: https://ilcodicefiscaleita/sitemap.xml
