@@ -5,7 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Il Mio Codice Fiscale</title>
+
+    <!-- Primary Meta Tags -->
+    <title>Calcolo Codice Fiscale Online</title>
+    <link rel="icon" href="./src/img/favicon.png" type="image/gif" sizes="50x50">
+    <meta class="meta_title-lang" key="stip_meta-title" name="title" content="Calcolo Codice Fiscale Online">
+    <meta class="meta_description-lang" key="stip_meta-description" name="description"
+        content="Calcolo Codice Fiscale Online">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:site_name" content="stip.io">
+    <meta property="og:type" content="stip.io">
+    <meta property="og:url" content="https://stip.io/platform.html">
+    <meta class="meta_title-lang" key="stip_meta-title" property="og:title" content="Calcolo Codice Fiscale Online">
+    <meta class="meta_description-lang" key="stip_meta-description" property="og:description"
+        content="Calcolo Codice Fiscale Online">
+    <meta property="og:image" content="./src/img/favicon.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta class="meta_title-lang" key="stip_meta-title" name="twitter:title" content="Calcolo Codice Fiscale Online" />
+    <meta class="meta_description-lang" key="stip_meta-description" name="twitter:description"
+        content="Calcolo Codice Fiscale Online" />
+    <meta name="twitter:image" content="./src/img/favicon.png" />
+
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -109,13 +130,15 @@
                                 <div class="col-md-8">
                                     <div class="form-group d-flex flex-column">
                                         <label for="cf_place" class="cf_h3 mb-0">Città di nascita</label>
-                                        <input type="text" autocomplete="off" class="form-control cf_input cf_p typeahead" id="cf_place" required>
+                                        <input type="text" autocomplete="off"
+                                            class="form-control cf_input cf_p typeahead" id="cf_place" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="cf_place-tag" class="cf_h3 mb-0">Sigla provincia</label>
-                                        <input type="text" autocomplete="nofill" class="form-control cf_input cf_p" id="cf_place-tag">
+                                        <input type="text" autocomplete="nofill" class="form-control cf_input cf_p"
+                                            id="cf_place-tag">
                                     </div>
                                 </div>
                             </div>
@@ -150,9 +173,22 @@
                     Calcola il tuo <b>Codice Fiscale inverso</b>
                 </button>
             </div>
-            <footer class="container cf_footer align-self-end mt-5 mt-md-0">
+
+            <div class="container mt-5 mb-3 align-self-end">
                 <div class="row">
-                    <div class="col d-flex flex-column justify-content-center">
+                    <div class="col d-flex justify-content-center align-items-center">
+                        <img src="./src/img/alexa_logo.png" alt="alexa logo" class="cf_alexa-logo">
+                        <div class="ml-3">
+                            <h3 class="cf_h3 cf_color">Puoi trovarci anche su Alexa!</h3>
+                            <p class="cf_p font-italic">"Alexa, apri il mio codice fiscale"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="container cf_footer align-self-end mt-4 mt-md-0">
+                <div class="row">
+                    <div class="col d-flex flex-column justify-content-center align-items-center">
                         <!-- description modal -->
                         <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
                             data-target="#cf_description-modal">
@@ -248,11 +284,17 @@
                             </div>
                         </div>
 
+                        <div>
+                            <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
+                                data-target="#cf_cookie-modal">
+                                Cookie Policy
+                            </button>
+                            <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
+                                data-target="#cf_contact-modal">
+                                Contattaci
+                            </button>
+                        </div>
                         <!-- cookie modal -->
-                        <button type="button" class="btn cf_btn-collapse cf_label" data-toggle="modal"
-                            data-target="#cf_cookie-modal">
-                            Cookie Policy
-                        </button>
                         <div class="modal fade" id="cf_cookie-modal" data-keyboard="false" tabindex="-1"
                             aria-labelledby="cf_cookie-modal-label" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-scrollable">
@@ -349,6 +391,41 @@
                                         <button type="button" class="btn btn-primary cf_btn"
                                             data-dismiss="modal">Chiudi</button>
                                         <!-- <button type="button" class="btn btn-primary">Understood</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- cookie modal -->
+                        <div class="modal fade" id="cf_contact-modal" data-keyboard="false" tabindex="-1"
+                            aria-labelledby="cf_contact-modal-label" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <div class="modal-header d-flex flex-column">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <h5 class="modal-title cf_h3 mb-2 cf_color" id="cf_cookie-modal-label">Contattaci</h5>
+                                        <p class="cf_p m-0">Contattaci
+                                            compilando questo form o inviandoci una mail qui: <mail class="cf_color"
+                                                style="text-decoration: underline;">codicefiscaleita@gmail.com</mail>
+                                        </p>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="cf_form-contact" action="mailto:codicefiscaleita@gmail.com"
+                                            method="post" enctype="text/plain">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control cf_input cf_p"
+                                                    id="cf_email-contact" placeholder="Email"
+                                                    pattern="^(.*){2,}@[a-zA-Z_]{2,}\.[a-zA-Z]{2,5}$" required>
+                                            </div>
+                                            <div class="form-group">
+                                                <textarea class="form-control mt-4 cf_textarea cf_p" name="message"
+                                                    id="cf_txt-contact" placeholder="Scrivi qui ..."
+                                                    rows="4"></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
+                                                id="cf_btn-send-contact">invia</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>

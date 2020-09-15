@@ -69,6 +69,21 @@ a {
           box-shadow: none;
 }
 
+.cf_textarea {
+  border-radius: 6px;
+  border: 1px solid #d9d9d9;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.cf_textarea:focus {
+  border-color: #2eb960;
+  outline: 0;
+  border-bottom: 1px solid #2eb960;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .cf_btn {
   background-color: #2eb960;
   border: 0;
@@ -112,6 +127,10 @@ a {
 
 .cf_btn-collapse:active {
   color: #2eb960 !important;
+}
+
+.cf_alexa-logo {
+  width: 80px;
 }
 
 .tt-menu {
