@@ -7,6 +7,11 @@ a {
   word-break: break-all;
 }
 
+label {
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .cf_h1 {
   font-size: 32px;
 }
@@ -178,9 +183,6 @@ a {
   }
   .cf_label {
     font-size: 14px;
-  }
-  .cf_logo-repubblica {
-    width: 45px;
   }
   .cf_card {
     min-width: 0;
