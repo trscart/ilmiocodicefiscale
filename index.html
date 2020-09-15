@@ -18,6 +18,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
         integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
         crossorigin="anonymous"></script>
+    <!-- city autocomplete -->
+    <script src="https://twitter.github.io/typeahead.js/releases/latest/typeahead.bundle.js"
+        type="text/javascript"></script>
     <!-- css -->
     <link rel="stylesheet" href="./src/index.css">
 </head>
@@ -51,7 +54,8 @@
                             <div class="form-row">
                                 <div class="col-8">
                                     <div class="form-group">
-                                        <label for="cf_date" class="cf_h3 mb-0">Data di nascita</label>
+                                        <label for="cf_date" class="cf_h3 mb-0" id="cf_date-label">Data di
+                                            nascita</label>
                                         <input type="date" class="form-control cf_input cf_p" id="cf_date" required>
                                     </div>
                                 </div>
@@ -103,15 +107,15 @@
                             </div> -->
                             <div class="form-row">
                                 <div class="col-md-8">
-                                    <div class="form-group">
+                                    <div class="form-group d-flex flex-column">
                                         <label for="cf_place" class="cf_h3 mb-0">Città di nascita</label>
-                                        <input type="text" class="form-control cf_input cf_p" id="cf_place" required>
+                                        <input type="text" autocomplete="off" class="form-control cf_input cf_p typeahead" id="cf_place" required>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label for="cf_place-tag" class="cf_h3 mb-0">Sigla provincia</label>
-                                        <input type="text" class="form-control cf_input cf_p" id="cf_place-tag">
+                                        <input type="text" autocomplete="nofill" class="form-control cf_input cf_p" id="cf_place-tag">
                                     </div>
                                 </div>
                             </div>
@@ -349,7 +353,7 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="cf_label text-center">© ilmiocodicefiscale - Copyright 2020</p>
+                        <p class="cf_label text-center">© codicefiscaleita - Copyright 2020</p>
                     </div>
                 </div>
             </footer>

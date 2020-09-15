@@ -105,6 +105,38 @@ a {
   color: #2eb960 !important;
 }
 
+.typeahead {
+  z-index: 1051;
+}
+
+.tt-menu {
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin-top: 10px;
+  top: -50% !important;
+  -webkit-transform: translateY(-100%) !important;
+          transform: translateY(-100%) !important;
+  height: 200px;
+  overflow-y: scroll;
+}
+
+.tt-suggestion {
+  padding: 3px 10px;
+}
+
+.tt-suggestion:hover {
+  cursor: pointer;
+  background-color: #2eb960;
+  color: #ffffff;
+}
+
+.twitter-typeahead {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
 @media (max-width: 576px) {
   .cf_h1 {
     font-size: 21px;
