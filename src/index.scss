@@ -58,10 +58,16 @@ a {
 }
 
 .cf_input {
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid #dedede;
+    transition: 0.5s;
+    
     &:focus {
         border-color: $primary_color;
         outline: 0;
-        box-shadow: 0 0 0 0.2rem rgba(46, 185, 96, 0.25);
+        border-bottom: 1px solid $primary_color;
+        box-shadow: none;
     }
 }
 
@@ -109,14 +115,15 @@ a {
 }
 
 .tt-menu {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
     background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.2);
+    //border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 8px;
     margin-top: 10px;
     top: -50% !important;
     transform: translateY(-100%) !important;
     height: 200px;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 .tt-suggestion {
     padding: 3px 10px;

@@ -53,11 +53,20 @@ a {
   width: 65px;
 }
 
+.cf_input {
+  border-radius: 0;
+  border: 0;
+  border-bottom: 1px solid #dedede;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .cf_input:focus {
   border-color: #2eb960;
   outline: 0;
-  -webkit-box-shadow: 0 0 0 0.2rem rgba(46, 185, 96, 0.25);
-          box-shadow: 0 0 0 0.2rem rgba(46, 185, 96, 0.25);
+  border-bottom: 1px solid #2eb960;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .cf_btn {
@@ -106,15 +115,16 @@ a {
 }
 
 .tt-menu {
+  -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+          box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
   background-color: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   margin-top: 10px;
   top: -50% !important;
   -webkit-transform: translateY(-100%) !important;
           transform: translateY(-100%) !important;
   height: 200px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 
 .tt-suggestion {
