@@ -53,7 +53,7 @@ a {
   width: 65px;
 }
 
-.form-group:active label {
+.form-group:focus label {
   color: #2eb960;
 }
 
