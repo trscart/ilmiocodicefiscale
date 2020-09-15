@@ -53,10 +53,6 @@ a {
   width: 65px;
 }
 
-.form-group:focus label {
-  color: #2eb960;
-}
-
 .cf_input {
   border-radius: 0;
   border: 0;

@@ -37,14 +37,16 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     // for IE11
     if (navigator.userAgent.indexOf('Trident/') > 0) {
-        $("#cf_date-label").text("Data di nascita (yyyy-gg-mm)")
+        $("#cf_date-label").text("Data di nascita (aaaa-mm-gg)")
+        $("#cf_date").attr("pattern", "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))")
     }
     // for safari
     if (navigator.userAgent.toLowerCase().indexOf('safari') != -1 && $(window).width() > 768) {
         if (navigator.userAgent.toLowerCase().indexOf('chrome') > -1) {
             console.log("chrome")
         } else {
-            $("#cf_date-label").text("Data di nascita (yyyy-gg-mm)")
+            $("#cf_date-label").text("Data di nascita (aaaa-mm-gg)")
+            $("#cf_date").attr("pattern", "([12]\\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01]))")
         }
     }
 

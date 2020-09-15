@@ -57,14 +57,6 @@ a {
     width: 65px;
 }
 
-.form-group{
-    &:focus{
-        label{
-            color: $primary_color;
-        }
-    }
-}
-
 .cf_input {
     border-radius: 0;
     border: 0;
