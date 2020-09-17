@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <!-- Primary Meta Tags -->
-    <title>Calcolo Codice Fiscale Online</title>
+    <title>Contattaci - Calcolo Codice Fiscale Online</title>
     <link rel="icon" href="./src/img/favicon.png" type="image/gif" sizes="50x50">
     <meta name="title" content="Calcolo Codice Fiscale Online">
     <meta name="description"
-        content="Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online.">
+        content="Contattaci - Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online.">
     <meta name="keywords"
         content="Codice Fiscale, Calcolo Codice Fiscale, Calcolo Codice Fiscale Online, Calcola Codice Fiscale Online, Codice Fiscale Online, Calcola Codice Fiscale, Codice Fiscale Italiano, Calcolo Codice Fiscale Italiano, Calcola Codice Fiscale Italiano, Calcolo Codice Fiscale Italiano Online, Calcola Codice Fiscale Italiano">
     <!-- Open Graph / Facebook -->
@@ -20,13 +20,13 @@
     <meta property="og:url" content="https://wwww.codicefiscaleita.it">
     <meta property="og:title" content="Calcolo Codice Fiscale Online">
     <meta property="og:description"
-        content="Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online.">
+        content="Contattaci - Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online.">
     <meta property="og:image" content="https://www.codicefiscaleita.it/src/img/alexa_lg.png">
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Calcolo Codice Fiscale Online" />
     <meta name="twitter:description"
-        content="Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online." />
+        content="Contattaci - Calcola velocemente il codice fiscale. Servizio rapido e gratuito per calcolare il tuo Codice Fiscale online." />
     <meta name="twitter:image" content="https://www.codicefiscaleita.it/src/img/alexa_lg.png" />
 
     <!-- bootstrap -->
@@ -73,16 +73,16 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link cf_color cf_nav-item" href="./index.html">Calcolo Codice Fiscale <span
-                            class="sr-only">(current)</span></a>
+                <li class="nav-item">
+                    <a class="nav-link cf_nav-item" href="./index.html">Calcolo Codice Fiscale</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link cf_nav-item" href="./info-codice-fiscale.html">Cos'è il Codice Fiscale e come si
                         calcola?</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link cf_nav-item" href="./contattaci.html">Contattaci</a>
+                <li class="nav-item active">
+                    <a class="nav-link cf_nav-item cf_color" href="./contattaci.html">Contattaci<span
+                            class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link cf_nav-item" href="./cookie-policy.html">Cookie Policy</a>
@@ -91,146 +91,34 @@
         </div>
     </nav>
 
-    <div class="container cf_container">
-        <div class="row align-items-center">
-            <div class="col-md"></div>
-            <div class="col-md d-flex flex-column align-items-center">
-                <div class="card shadow cf_card mt-4" id="cf_normal-card">
-                    <div class="card-header d-flex align-items-center p-4 cf_card-header">
-                        <img src="./src/img/logo_repubblica.svg" class="cf_logo-repubblica d-none d-md-block"
-                            alt="logo repubblica italiana">
-                        <div>
-                            <h1 class="cf_h1 text-white ml-0 ml-md-4" style="font-weight: 700;">Calcolo Codice Fiscale
-                            </h1>
-                            <h2 class="cf_p text-white ml-0 ml-md-4 mb-0">Calcola online il tuo Codice Fiscale</h2>
-                        </div>
-                    </div>
-                    <div class="card-body p-4 cf_card-body" id="cf_normal-card-body">
-                        <form id="cf_form">
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="cf_name" class="cf_h3 mb-0">Nome</label>
-                                        <input type="text" class="form-control cf_input cf_p" id="cf_name" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="cf_surname" class="cf_h3 mb-0">Cognome</label>
-                                        <input type="text" class="form-control cf_input cf_p" id="cf_surname" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="col-8">
-                                    <div class="form-group">
-                                        <label for="cf_date" class="cf_h3 mb-0" id="cf_date-label">Data di
-                                            nascita</label>
-                                        <input type="date" class="form-control cf_input cf_p" id="cf_date" required>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <label for="cf_gender" class="cf_h3 mb-0">Sesso</label>
-                                    <select class="form-control cf_input cf_p" id="cf_gender" required>
-                                        <option>M</option>
-                                        <option>F</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <!-- <div class="form-row align-items-end">
-                                <div class="col-12">
-                                    <label for="cf_date" class="cf_h3 mb-0">Data di nascita</label>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <select class="form-control cf_input cf_p" id="cf_date-day" required>
-                                            <option selected disabled>Giorno</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <select class="form-control cf_input cf_p" id="cf_date-month" required>
-                                            <option selected disabled>Mese</option>
-                                            <option>Gennaio</option>
-                                            <option>Febbraio</option>
-                                            <option>Marzo</option>
-                                            <option>Aprile</option>
-                                            <option>Maggio</option>
-                                            <option>Giugno</option>
-                                            <option>Luglio</option>
-                                            <option>Agosto</option>
-                                            <option>Settembre</option>
-                                            <option>Ottobre</option>
-                                            <option>Novembre</option>
-                                            <option>Dicembre</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-4">
-                                    <div class="form-group">
-                                        <select class="form-control cf_input cf_p" id="cf_date-year" required>
-                                            <option selected disabled>Anno</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <div class="form-row">
-                                <div class="col-md-8">
-                                    <div class="form-group d-flex flex-column">
-                                        <label for="cf_place" class="cf_h3 mb-0">Città di nascita</label>
-                                        <input type="text" autocomplete="off"
-                                            class="form-control cf_input cf_p typeahead" id="cf_place" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="cf_place-tag" class="cf_h3 mb-0">Sigla provincia</label>
-                                        <input type="text" autocomplete="nofill" class="form-control cf_input cf_p"
-                                            id="cf_place-tag">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
-                                id="cf_btn-send">Calcola</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="card shadow cf_card mt-4" id="cf_reverse-card">
-                    <div class="card-header d-flex align-items-center p-4 cf_card-header">
-                        <img src="./src/img/logo_repubblica.svg" class="cf_logo-repubblica d-none d-md-block"
-                            alt="logo repubblica italiana">
-                        <p class="cf_h1 text-white ml-0 ml-md-4 mb-0" style="font-weight: 700;">Calcolo Codice Fiscale
-                            Inverso</p>
-                    </div>
-                    <div class="card-body p-4 cf_card-body" id="cf_reverse-card-body">
-                        <form id="cf_reverse-form">
-                            <div class="form-group">
-                                <label for="cf_reverse" class="cf_h3 mb-0">Il tuo Codice Fiscale</label>
-                                <input type="text" class="form-control cf_input cf_p" id="cf_reverse" required>
-                            </div>
-                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
-                                id="cf_btn-send">Calcola</button>
-                        </form>
-                    </div>
-                </div>
-
-                <button class="btn cf_btn-collapse cf_h3 mt-2" id="cf_normal-btn" type="button">
-                    Calcola il tuo <b>Codice Fiscale</b>
-                </button>
-                <button class="btn cf_btn-collapse cf_h3 mt-2" id="cf_reverse-btn" type="button">
-                    Calcola il tuo <b>Codice Fiscale inverso</b>
-                </button>
-            </div>
-            <div class="col-md"></div>
-        </div>
-        <div class="row my-5">
+    <div class="container">
+        <div class="row">
             <div class="col d-flex justify-content-center">
-                <img src="./src/img/alexa_logo.png" alt="alexa logo" class="cf_alexa-logo">
-                <div class="ml-3">
-                    <p class="cf_h3 cf_color">Puoi trovarci anche su Alexa!</p>
-                    <p class="cf_p font-italic">"Alexa, apri il mio codice fiscale"</p>
+                <div class="card shadow cf_card mt-4">
+                    <div class="card-header align-items-center p-4 text-white cf_card-header">
+                        <h1 class="cf_h1" style="font-weight: 700;">Contattaci - Calcolo Codice Fiscale Online</h1>
+                        <p class="cf_p m-0">Contattaci
+                            compilando questo form o inviandoci una mail qui: <a class="text-white"
+                                style="text-decoration: underline;"
+                                href="mailto:codicefiscaleita@gmail.com">codicefiscaleita@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="card-body p-4 cf_card-body">
+                        <form id="cf_form-contact" action="mailto:codicefiscaleita@gmail.com" method="post"
+                            enctype="text/plain">
+
+                            <div class="form-group">
+                                <input type="email" class="form-control cf_input cf_p" id="cf_email-contact"
+                                    placeholder="Email" pattern="^(.*){2,}@[a-zA-Z_]{2,}\.[a-zA-Z]{2,5}$" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control mt-4 cf_textarea cf_p" name="message" id="cf_txt-contact"
+                                    placeholder="Scrivi qui ..." rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
+                                id="cf_btn-send-contact">invia</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -459,8 +347,8 @@
                                     Contattaci</p>
                                 <p class="cf_p m-0">Contattaci
                                     compilando questo form o inviandoci una mail qui: <a class="cf_color"
-                                    style="text-decoration: underline;"
-                                    href="mailto:codicefiscaleita@gmail.com">codicefiscaleita@gmail.com</a>
+                                        style="text-decoration: underline;"
+                                        href="mailto:codicefiscaleita@gmail.com">codicefiscaleita@gmail.com</a>
                                 </p>
                             </div>
                             <div class="modal-body">
@@ -473,7 +361,8 @@
                                     </div>
                                     <div class="form-group">
                                         <textarea class="form-control mt-4 cf_textarea cf_p" name="message"
-                                            id="cf_txt-contact" placeholder="Scrivi qui ..." rows="4" required></textarea>
+                                            id="cf_txt-contact" placeholder="Scrivi qui ..." rows="4"
+                                            required></textarea>
                                     </div>
                                     <button type="submit" class="btn btn-primary cf_btn mt-2 float-right"
                                         id="cf_btn-send-contact">invia</button>
@@ -488,12 +377,7 @@
     </footer>
 
     <!-- js -->
-    <script src="./src/cities.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.1/js.cookie.min.js"
-        integrity="sha512-Meww2sXqNHxI1+5Dyh/9KAtvI9RZSA4c1K2k5iL02oiPO/RH3Q30L3M1albtqMg50u4gRTYdV4EXOQqXEI336A=="
-        crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
-    <script src="./src/cf.js"></script>
     <script src="./src/index.js"></script>
 </body>
 

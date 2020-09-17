@@ -39,11 +39,30 @@ label {
 }
 
 .cf_color {
-    color: $primary_color;
+    color: $primary_color !important;
 }
 
-.cf_container {
-    height: 100vh;
+/* .cf_container {
+    //height: 100vh;
+} */
+
+.cf_nav-item {
+    font-size: 18px;
+    margin-left: 15px;
+    font-weight: 500;
+}
+
+.cf_nav {
+    padding-right: 100px;
+    padding-left: 100px;
+}
+
+.cf_nav-btn {
+    border: 0;
+
+    &:focus {
+        outline: 0;
+    }
 }
 
 .cf_card {
@@ -150,6 +169,9 @@ label {
 .tt-suggestion {
     padding: 3px 10px;
 }
+.tt-cursor {
+    background-color: $primary_color;
+}
 .tt-suggestion:hover {
     cursor: pointer;
     background-color: $primary_color;
@@ -157,6 +179,10 @@ label {
 }
 .twitter-typeahead {
     display: flex !important;
+}
+
+.cf_footer {
+    background-color: #f8f9fa;
 }
 
 @media (max-width: 576px) {
@@ -182,5 +208,20 @@ label {
 
     .cf_card {
         min-width: 0;
+    }
+
+    .cf_nav {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .cf_nav-item {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 992px) {
+    .cf_nav-item {
+        margin-left: 0;
     }
 }

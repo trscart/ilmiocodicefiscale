@@ -2,4 +2,4 @@
 
 User-agent: *
 
-Sitemap: https://ilcodicefiscaleita/sitemap.xml
+Sitemap: https://codicefiscaleita.it/sitemap.xml

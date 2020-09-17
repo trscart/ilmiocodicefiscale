@@ -13,7 +13,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     if (Cookies.get('cf')) {
         let cf_obj = JSON.parse(Cookies.get('cf'));
-        console.log(cf_obj)
         $("#cf_form").hide()
         $("#cf_normal-card-body").append('<div class="text-center" id="cf_result"><h2 class="cf_h2" id="cf_code" data-clipboard-text=' + cf_obj.cf + '>Il tuo codice fiscale è <b id="cf_tooltip" data-toggle="tooltip" data-placement="top" style="color: #2eb960">' + cf_obj.cf + '</b></h2><button type="click" class="btn btn-primary cf_btn mt-2" id="cf_btn-restart">Ricalcola</button></div>')
 
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
         };
     };
     $('.typeahead').typeahead({
-        hint: false,
+        hint: true,
         highlight: true,
         minLength: 1
     },
@@ -197,7 +196,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         e.preventDefault()
 
         let cf = new CodiceFiscale($("#cf_reverse").val());
-        console.log(cf.toJSON());
         let data = cf.toJSON()
 
         $("#cf_reverse-form").hide()
