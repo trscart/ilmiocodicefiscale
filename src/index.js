@@ -142,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
                 "month": month,
                 "year": year,
                 "birthplace": $("#cf_place").val(),
-                "birthplaceProvincia": $("#cf_place-tag").val().toUpperCase()
+                //"birthplaceProvincia": $("#cf_place-tag").val().toUpperCase()
             }
         }
 
